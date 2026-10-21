@@ -1,0 +1,2 @@
+# build output of `make package` / `make upgrade` (Mk/plugins.mk uses ${.CURDIR}/work)
+/work/

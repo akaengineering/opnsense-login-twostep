@@ -1,0 +1,12 @@
+Splits the web GUI login into two screens for users of the
+"Local + Timebased One Time Password" (or "LDAP + Timebased One
+Time Password") authentication server: username and password first,
+the authentication code on a second screen.
+
+The change is purely client-side. The script joins the code and the
+password in the order the configured TOTP server expects and submits
+the stock login form, so the server-side authentication flow and the
+security properties of the combined field are unchanged. Without a
+TOTP server selected for the web GUI the login page stays stock.
+
+WWW: https://github.com/akaengineering/opnsense-login-twostep
