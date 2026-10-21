@@ -1,0 +1,43 @@
+name: lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: PHP syntax check
+        run: |
+          set -e
+          find src -type f -name '*.php' -print0 | xargs -0 -n1 php -l
+
+      - name: JavaScript syntax check
+        run: |
+          set -e
+          find src -type f -name '*.js' -print0 | xargs -0 -n1 node --check
+
+      - name: Plugin layout sanity
+        run: |
+          set -e
+          test -f Makefile && test -f pkg-descr && test -f LICENSE
+          grep -q '^PLUGIN_NAME=' Makefile
+          grep -q '\.include "../../Mk/plugins.mk"' Makefile
+          # every PHP/JS/CSS source carries the license header
+          for f in $(find src -type f \( -name '*.php' -o -name '*.js' -o -name '*.css' \)); do
+            grep -q 'Redistribution and use in source and binary forms' "$f" || { echo "missing license header: $f"; exit 1; }
+          done
