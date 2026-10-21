@@ -1,0 +1,64 @@
+/*
+ * Copyright (C) 2026 AKA Engineering
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ * AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ * OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/*
+ * os-login-twostep: the form reuses the theme's Bootstrap 3 classes
+ * (form-group, form-control, btn, help-block, text-danger) so every theme
+ * applies. Only layout glue lives here.
+ */
+
+/* data carrier only, keeps the empty .login-sso-link-container at zero height */
+#login-twostep {
+    display: none !important;
+}
+
+/* Bootstrap's .btn would win over the [hidden] attribute, hence a class */
+.login-twostep-hidden {
+    display: none !important;
+}
+
+.login-twostep-user {
+    margin: 0 0 10px 0;
+    word-break: break-all;
+}
+
+.login-twostep-hint {
+    margin-bottom: 5px;
+}
+
+/* same height as .btn so "Back" lines up with the "Login" button */
+.login-twostep-back {
+    display: inline-block;
+    line-height: 34px;
+}
+
+.login-twostep-error {
+    margin-bottom: 10px;
+}
+
+.login-twostep-error:empty {
+    display: none;
+}
