@@ -23,9 +23,9 @@ Written and verified against **OPNsense 26.7** (core `stable/26.7`, plugins
 
 ## Screenshots
 
-<img width="462" height="384" alt="image" src="https://github.com/user-attachments/assets/64ce9647-7b73-433e-8cfc-a3f5c827e24a" />
+<img width="462" height="384" alt="image" src="https://github.com/user-attachments/assets/833d6c10-2032-4f4f-8a03-df029e0741d7" />
 
-<img width="457" height="367" alt="image" src="https://github.com/user-attachments/assets/b04f093e-0268-4f55-965f-abb4d8ad79ca" />
+<img width="457" height="367" alt="image" src="https://github.com/user-attachments/assets/996b9b66-df86-4062-8d94-c6c32a780584" />
 
 ## Security note
 
