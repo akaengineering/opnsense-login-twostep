@@ -248,6 +248,15 @@ src/opnsense/www/css/login_twostep.css
 
 No core files are overwritten, no `opnsense-patch`, no post-install scripts.
 
+## Authorship
+
+This plugin was coded by Claude, Anthropic's AI assistant, working through
+Claude Code on behalf of AKA Engineering, who specified the behaviour,
+reviewed the result and maintain the repository. The core hooks were
+verified by Claude against OPNsense `stable/26.7` sources; the on-firewall
+checklist above is for humans. Treat it like any other third-party code and
+review it before putting it in front of a production login page.
+
 ## License
 
 BSD-2-Clause, see [LICENSE](LICENSE).
