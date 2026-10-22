@@ -23,9 +23,9 @@ Written and verified against **OPNsense 26.7** (core `stable/26.7`, plugins
 
 ## Screenshots
 
-_Placeholder: screen 1 (username/password, "Next")_
+<img width="462" height="384" alt="image" src="https://github.com/user-attachments/assets/64ce9647-7b73-433e-8cfc-a3f5c827e24a" />
 
-_Placeholder: screen 2 (authentication code, "Back", "Login")_
+<img width="457" height="367" alt="image" src="https://github.com/user-attachments/assets/b04f093e-0268-4f55-965f-abb4d8ad79ca" />
 
 ## Security note
 
